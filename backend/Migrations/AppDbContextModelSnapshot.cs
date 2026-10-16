@@ -29,6 +29,10 @@ namespace FeedbackFormAPI.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("ClassName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
@@ -39,6 +43,10 @@ namespace FeedbackFormAPI.Migrations
 
                     b.Property<int>("Rating")
                         .HasColumnType("integer");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
