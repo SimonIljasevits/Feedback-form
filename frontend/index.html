@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <h1>Feedback form</h1>
+
+    <form id="feedbackForm">
+      <div class="identity">
+        <input id="name" name="name" type="text" placeholder="Your name" aria-label="Your name" required />
+        <input id="className" name="className" type="text" placeholder="Your class" aria-label="Your class" required />
+      </div>
+
+      <select id="subject" name="subject" aria-label="Choose subject" required>
+        <option value="" selected disabled>Choose subject</option>
+        <option>Mathematics</option>
+        <option>English</option>
+        <option>Estonian</option>
+        <option>Physics</option>
+        <option>Chemistry</option>
+        <option>Biology</option>
+        <option>History</option>
+        <option>Other</option>
+      </select>
+
+      <section class="feedback-panel">
+        <div class="comment-area">
+          <label for="feedback">Feedback</label>
+          <textarea id="feedback" name="feedback" aria-label="Feedback"></textarea>
+        </div>
+
+        <fieldset class="rating-area">
+          <legend>How would you rate the<br class="desktop-break" /> subject 1-10?</legend>
+          <div class="rating-grid" role="radiogroup" aria-label="Rate the subject from 1 to 10">
+            <label class="rating"><input type="radio" name="rating" value="1" required /><span>1</span></label>
+            <label class="rating"><input type="radio" name="rating" value="2" /><span>2</span></label>
+            <label class="rating"><input type="radio" name="rating" value="3" /><span>3</span></label>
+            <label class="rating"><input type="radio" name="rating" value="4" /><span>4</span></label>
+            <label class="rating"><input type="radio" name="rating" value="5" /><span>5</span></label>
+            <label class="rating"><input type="radio" name="rating" value="6" /><span>6</span></label>
+            <label class="rating"><input type="radio" name="rating" value="7" /><span>7</span></label>
+            <label class="rating"><input type="radio" name="rating" value="8" /><span>8</span></label>
+            <label class="rating"><input type="radio" name="rating" value="9" /><span>9</span></label>
+            <label class="rating"><input type="radio" name="rating" value="10" /><span>10</span></label>
+          </div>
+        </fieldset>
+      </section>
+
+      <div class="form-footer">
+        <button type="submit">publish</button>
+        <p id="status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
