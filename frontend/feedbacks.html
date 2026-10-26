@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submitted Feedback</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="top-bar">
+      <a href="index.html" class="nav-link">&larr; Back to feedback form</a>
+    </div>
+
+    <h1>Submitted Feedback</h1>
+
+    <div class="controls-bar">
+      <select id="subjectFilter" aria-label="Filter by subject">
+        <option value="">All subjects</option>
+        <option>Mathematics</option>
+        <option>English</option>
+        <option>Estonian</option>
+        <option>Physics</option>
+        <option>Chemistry</option>
+        <option>Biology</option>
+        <option>History</option>
+        <option>Other</option>
+      </select>
+      <button id="refreshBtn" type="button">Refresh</button>
+    </div>
+
+    <div id="feedbacksContainer" class="feedbacks-grid" role="region" aria-live="polite">
+      <p class="loading-state">Loading feedbacks...</p>
+    </div>
+  </main>
+  <script src="feedbacks.js"></script>
+</body>
+</html>
