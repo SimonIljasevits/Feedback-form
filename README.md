@@ -4,7 +4,7 @@ Feedback collection system with an ASP.NET Core Web API backend, PostgreSQL data
 
 ## Architecture
 
-- **Frontend**: Nginx container serving the HTML5 feedback form on port 3000 and reverse-proxying `/api/` calls to the backend.
+- **Frontend**: Nginx container serving the HTML5 feedback form and feedbacks listing on port 3000 and reverse-proxying `/api/` calls to the backend.
 - **Backend**: ASP.NET Core 10 Web API running on port 5200 (internal port 8080) handling feedback submissions and queries with automatic EF Core migrations.
 - **Database**: PostgreSQL 16 on port 5436.
 
@@ -21,7 +21,8 @@ docker compose up --build
 ```
 
 3. Access the application:
-- Frontend UI: http://localhost:3000
+- Feedback Form: http://localhost:3000
+- Submitted Feedback: http://localhost:3000/feedbacks.html
 - Backend API Docs (Scalar): http://localhost:5200/scalar/v1
 - Feedback API Endpoint: http://localhost:3000/api/feedback (or direct backend: http://localhost:5200/api/feedback)
 
